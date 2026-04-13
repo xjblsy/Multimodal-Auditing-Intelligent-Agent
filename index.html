@@ -9,56 +9,35 @@
   <body>
     <div class="page-shell">
       <header class="hero-card fade-up">
-        <div class="hero-copy">
-          <p class="eyebrow">Scene 04 / 智能知识库与多模态实践指导</p>
-          <h1>会计审计智能知识作战台</h1>
-          <p class="hero-lead">
-            把专业知识、案例演练、图表材料和自然语言问答放进同一个学习闭环里，
-            让新手更快建立审计思维，让行业经验可以被沉淀、复用、迭代。
-          </p>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric-card">
-            <span class="metric-label">知识条目</span>
-            <strong id="knowledgeCount">0</strong>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">智能知识库与多模态实践指导</p>
+            <h1>会计审计智能知识作战台</h1>
+            <p class="hero-lead">
+              把专业知识、案例演练、图表材料和自然语言问答放进同一个学习闭环里，
+              让新手更快建立审计思维，让行业经验可以被沉淀、复用、迭代。
+            </p>
           </div>
-          <div class="metric-card">
-            <span class="metric-label">模拟案例</span>
-            <strong id="scenarioCount">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">当前模型</span>
-            <strong id="modelBadge">mock</strong>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label">知识条目</span>
+              <strong id="knowledgeCount">0</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">模拟案例</span>
+              <strong id="scenarioCount">0</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">当前模型</span>
+              <strong id="modelBadge">mock</strong>
+            </div>
           </div>
         </div>
       </header>
 
-      <main class="workspace-grid">
-        <section class="panel fade-up">
-          <div class="panel-header">
-            <div>
-              <p class="panel-kicker">Knowledge Radar</p>
-              <h2>知识雷达</h2>
-            </div>
-            <button id="refreshKnowledgeBtn" class="ghost-btn">刷新</button>
-          </div>
-
-          <form id="knowledgeSearchForm" class="toolbar">
-            <input id="knowledgeQuery" type="text" placeholder="搜索收入、监盘、函证、平台数据治理..." />
-            <select id="knowledgeIndustry">
-              <option value="">全部行业</option>
-              <option value="制造业">制造业</option>
-              <option value="SaaS">SaaS</option>
-              <option value="互联网平台">互联网平台</option>
-              <option value="通用">通用</option>
-            </select>
-            <button type="submit" class="primary-btn">检索</button>
-          </form>
-
-          <div id="knowledgeList" class="card-list"></div>
-        </section>
-
-        <section class="panel wide fade-up">
+      <main class="main-content">
+        <!-- 智能对话区域 -->
+        <section class="panel chat-panel fade-up">
           <div class="panel-header">
             <div>
               <p class="panel-kicker">Audit Copilot</p>
@@ -67,10 +46,17 @@
             <span id="statusPill" class="status-pill">本地知识增强</span>
           </div>
 
+          <div id="chatResponse" class="chat-response">
+            <div class="empty-state">
+              <h3>从真实问题开始</h3>
+              <p>系统会结合知识库、案例和多模态材料，给出审计切入路径、证据建议和学习延伸。</p>
+            </div>
+          </div>
+
           <form id="chatForm" class="chat-form">
             <textarea
               id="chatInput"
-              rows="5"
+              rows="4"
               placeholder="例如：制造业期末存货异常上升，我应该怎样设计监盘和后续程序？"
             ></textarea>
             <div class="chat-form-row">
@@ -80,498 +66,48 @@
                 <option value="互联网平台">互联网平台</option>
                 <option value="通用">通用</option>
               </select>
-              <select id="chatScenario">
-                <option value="">不绑定案例</option>
-              </select>
-              <button type="submit" class="primary-btn">生成指导</button>
+              <button type="submit" class="primary-btn">发送</button>
             </div>
           </form>
-
-          <div id="chatResponse" class="response-board">
-            <div class="empty-state">
-              <h3>从真实问题开始</h3>
-              <p>系统会结合知识库、案例和多模态材料，给出审计切入路径、证据建议和学习延伸。</p>
-            </div>
-          </div>
         </section>
 
-        <section class="panel fade-up">
+        <!-- 知识库上传区域 -->
+        <section class="panel upload-panel fade-up">
           <div class="panel-header">
             <div>
-              <p class="panel-kicker">Practice Lab</p>
-              <h2>案例练兵</h2>
+              <p class="panel-kicker">Knowledge Studio</p>
+              <h2>知识库上传</h2>
             </div>
           </div>
 
-          <div class="stack">
-            <label class="field">
-              <span>选择案例</span>
-              <select id="scenarioSelect"></select>
-            </label>
-            <label class="field">
-              <span>阶段</span>
-              <select id="scenarioStageSelect"></select>
-            </label>
-            <div id="scenarioContext" class="mini-card"></div>
-            <textarea
-              id="scenarioAnswer"
-              rows="7"
-              placeholder="写下你会怎么识别风险、找哪些证据、如何形成结论..."
-            ></textarea>
-            <button id="evaluateScenarioBtn" class="primary-btn">评估我的作答</button>
-            <div id="scenarioFeedback" class="mini-card muted"></div>
+          <div class="upload-container">
+            <div class="upload-area">
+              <div class="upload-icon">📁</div>
+              <h3>拖拽文件到此处或点击上传</h3>
+              <p>支持 .txt、.md、.docx、图片等格式</p>
+              <input type="file" id="fileInput" class="file-input" multiple />
+              <button id="uploadBtn" class="primary-btn upload-btn">选择文件</button>
+            </div>
+
+            <div id="uploadProgress" class="upload-progress" style="display: none;">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+              </div>
+              <p class="progress-text">上传中... 0%</p>
+            </div>
+
+            <div id="uploadStatus" class="upload-status" style="display: none;">
+              <div class="status-icon success">✓</div>
+              <h3>上传成功</h3>
+              <p id="uploadMessage">文件已成功上传到知识库</p>
+            </div>
           </div>
         </section>
       </main>
 
-      <section class="bottom-grid">
-        <section class="panel fade-up">
-          <div class="panel-header">
-            <div>
-              <p class="panel-kicker">Knowledge Detail</p>
-              <h2>知识拆解</h2>
-            </div>
-          </div>
-          <div id="knowledgeDetail" class="detail-shell">
-            <div class="empty-state">
-              <h3>左侧选择一个条目</h3>
-              <p>这里会展示正文、清单、问答、图表、视频占位和关联主题。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel fade-up">
-          <div class="panel-header">
-            <div>
-              <p class="panel-kicker">Learning Navigator</p>
-              <h2>学习路径生成器</h2>
-            </div>
-          </div>
-          <form id="pathForm" class="stack">
-            <label class="field">
-              <span>行业方向</span>
-              <select id="pathIndustry">
-                <option value="制造业">制造业</option>
-                <option value="SaaS">SaaS</option>
-                <option value="互联网平台">互联网平台</option>
-                <option value="通用">通用</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>目标角色</span>
-              <input id="pathRole" type="text" value="助理审计员" />
-            </label>
-            <label class="field">
-              <span>目标等级</span>
-              <select id="pathLevel">
-                <option value="初级">初级</option>
-                <option value="中级" selected>中级</option>
-                <option value="高级">高级</option>
-              </select>
-            </label>
-            <button type="submit" class="primary-btn">生成路径</button>
-          </form>
-          <div id="pathResult" class="path-board"></div>
-        </section>
-      </section>
-
-      <section class="panel studio-panel fade-up">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">Knowledge Studio</p>
-            <h2>知识库编辑工坊</h2>
-          </div>
-          <div class="panel-actions">
-            <button id="newItemBtn" class="ghost-btn">新建条目</button>
-            <button id="rebuildBtn" class="ghost-btn">重建索引</button>
-          </div>
-        </div>
-
-        <form id="editorForm" class="editor-grid">
-          <input id="editorId" type="hidden" />
-          <label class="field">
-            <span>标题</span>
-            <input id="editorTitle" type="text" required />
-          </label>
-          <label class="field">
-            <span>分类</span>
-            <input id="editorCategory" type="text" />
-          </label>
-          <label class="field">
-            <span>行业（逗号分隔）</span>
-            <input id="editorIndustries" type="text" />
-          </label>
-          <label class="field">
-            <span>难度</span>
-            <input id="editorDifficulty" type="text" />
-          </label>
-          <label class="field full">
-            <span>标签（逗号分隔）</span>
-            <input id="editorTags" type="text" />
-          </label>
-          <label class="field full">
-            <span>摘要</span>
-            <textarea id="editorSummary" rows="3"></textarea>
-          </label>
-          <label class="field full">
-            <span>学习目标（每行一个）</span>
-            <textarea id="editorObjectives" rows="4"></textarea>
-          </label>
-          <label class="field full">
-            <span>正文（支持用 `## 标题` 分段）</span>
-            <textarea id="editorBody" rows="10"></textarea>
-          </label>
-          <label class="field">
-            <span>检查清单（每行一个）</span>
-            <textarea id="editorChecklist" rows="6"></textarea>
-          </label>
-          <label class="field">
-            <span>风险信号（每行一个）</span>
-            <textarea id="editorRedFlags" rows="6"></textarea>
-          </label>
-          <label class="field full">
-            <span>常见误区（每行一个）</span>
-            <textarea id="editorMistakes" rows="4"></textarea>
-          </label>
-          <label class="field">
-            <span>问答 JSON</span>
-            <textarea id="editorQuestions" rows="7">[]</textarea>
-          </label>
-          <label class="field">
-            <span>关联主题（逗号分隔）</span>
-            <input id="editorRelated" type="text" />
-          </label>
-          <label class="field">
-            <span>视觉资源 JSON</span>
-            <textarea id="editorVisuals" rows="7">[]</textarea>
-          </label>
-          <label class="field">
-            <span>视频资源 JSON</span>
-            <textarea id="editorVideos" rows="7">[]</textarea>
-          </label>
-          <label class="field full">
-            <span>表格资源 JSON</span>
-            <textarea id="editorTables" rows="7">[]</textarea>
-          </label>
-          <div class="editor-actions full">
-            <button type="submit" class="primary-btn">保存条目</button>
-            <button type="button" id="deleteItemBtn" class="danger-btn">删除当前条目</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="panel studio-panel fade-up">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">Financial Data</p>
-            <h2>财务数据管理与分析</h2>
-          </div>
-          <div class="panel-actions">
-            <button id="newDataSourceBtn" class="ghost-btn">添加数据源</button>
-          </div>
-        </div>
-
-        <div class="stack">
-          <div id="dataSourcesList" class="card-list"></div>
-          
-          <div id="dataSourceForm" class="mini-card" style="display: none;">
-            <h3>添加数据源</h3>
-            <form id="newDataSourceForm" class="stack">
-              <label class="field">
-                <span>名称</span>
-                <input id="dsName" type="text" required />
-              </label>
-              <label class="field">
-                <span>类型</span>
-                <select id="dsType">
-                  <option value="csv">CSV</option>
-                  <option value="excel">Excel</option>
-                  <option value="json">JSON</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>路径</span>
-                <input id="dsPath" type="text" required />
-              </label>
-              <label class="field">
-                <span>描述</span>
-                <textarea id="dsDescription" rows="3"></textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">保存</button>
-                <button type="button" id="cancelDataSourceBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="dataAnalysisResult" class="response-board" style="display: none;">
-            <h3>分析结果</h3>
-            <div id="analysisContent"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel studio-panel fade-up">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">Risk Assessment</p>
-            <h2>审计风险评估</h2>
-          </div>
-          <div class="panel-actions">
-            <button id="newRiskFactorBtn" class="ghost-btn">添加风险因素</button>
-            <button id="assessRiskBtn" class="primary-btn">评估风险</button>
-          </div>
-        </div>
-
-        <div class="stack">
-          <div class="row">
-            <label class="field">
-              <span>行业</span>
-              <select id="riskIndustry">
-                <option value="通用">通用</option>
-                <option value="制造业">制造业</option>
-                <option value="SaaS">SaaS</option>
-                <option value="互联网平台">互联网平台</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>数据源</span>
-              <select id="riskDataSource">
-                <option value="">不使用数据源</option>
-              </select>
-            </label>
-          </div>
-
-          <div id="riskFactorsList" class="card-list"></div>
-          
-          <div id="riskFactorForm" class="mini-card" style="display: none;">
-            <h3>添加风险因素</h3>
-            <form id="newRiskFactorForm" class="stack">
-              <label class="field">
-                <span>名称</span>
-                <input id="rfName" type="text" required />
-              </label>
-              <label class="field">
-                <span>描述</span>
-                <textarea id="rfDescription" rows="3"></textarea>
-              </label>
-              <div class="row">
-                <label class="field">
-                  <span>严重程度 (1-5)</span>
-                  <input id="rfSeverity" type="number" min="1" max="5" value="3" />
-                </label>
-                <label class="field">
-                  <span>发生可能性 (1-5)</span>
-                  <input id="rfLikelihood" type="number" min="1" max="5" value="3" />
-                </label>
-              </div>
-              <label class="field">
-                <span>类别</span>
-                <input id="rfCategory" type="text" />
-              </label>
-              <label class="field">
-                <span>行业</span>
-                <select id="rfIndustry">
-                  <option value="通用">通用</option>
-                  <option value="制造业">制造业</option>
-                  <option value="SaaS">SaaS</option>
-                  <option value="互联网平台">互联网平台</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>控制措施（每行一个）</span>
-                <textarea id="rfControls" rows="4"></textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">保存</button>
-                <button type="button" id="cancelRiskFactorBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="riskAssessmentResult" class="response-board" style="display: none;">
-            <h3>风险评估结果</h3>
-            <div id="assessmentContent"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel studio-panel fade-up">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">Compliance Check</p>
-            <h2>合规性检查</h2>
-          </div>
-          <div class="panel-actions">
-            <button id="newComplianceStandardBtn" class="ghost-btn">添加合规标准</button>
-            <button id="checkComplianceBtn" class="primary-btn">检查合规性</button>
-          </div>
-        </div>
-
-        <div class="stack">
-          <div id="complianceStandardsList" class="card-list"></div>
-          
-          <div id="complianceStandardForm" class="mini-card" style="display: none;">
-            <h3>添加合规标准</h3>
-            <form id="newComplianceStandardForm" class="stack">
-              <label class="field">
-                <span>名称</span>
-                <input id="csName" type="text" required />
-              </label>
-              <label class="field">
-                <span>描述</span>
-                <textarea id="csDescription" rows="3"></textarea>
-              </label>
-              <label class="field">
-                <span>类别</span>
-                <select id="csCategory">
-                  <option value="审计准则">审计准则</option>
-                  <option value="会计准则">会计准则</option>
-                  <option value="法律法规">法律法规</option>
-                </select>
-              </label>
-              <div class="row">
-                <label class="field">
-                  <span>版本</span>
-                  <input id="csVersion" type="text" />
-                </label>
-                <label class="field">
-                  <span>生效日期</span>
-                  <input id="csEffectiveDate" type="date" />
-                </label>
-              </div>
-              <label class="field">
-                <span>要求（每行一个）</span>
-                <textarea id="csRequirements" rows="4"></textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">保存</button>
-                <button type="button" id="cancelComplianceStandardBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="complianceEvidenceForm" class="mini-card" style="display: none;">
-            <h3>提供审计证据</h3>
-            <form id="complianceEvidenceForm" class="stack">
-              <label class="field">
-                <span>选择标准</span>
-                <select id="complianceStandardSelect">
-                  <option value="">全部标准</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>审计证据（JSON格式）</span>
-                <textarea id="complianceEvidence" rows="6">{"审计证据": "已获取充分适当的审计证据", "职业怀疑": "保持了职业怀疑态度", "重大错报风险": "已识别和评估重大错报风险"}</textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">检查合规性</button>
-                <button type="button" id="cancelComplianceCheckBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="complianceCheckResult" class="response-board" style="display: none;">
-            <h3>合规性检查结果</h3>
-            <div id="complianceContent"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel studio-panel fade-up">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">Report Generator</p>
-            <h2>审计报告生成</h2>
-          </div>
-          <div class="panel-actions">
-            <button id="newReportTemplateBtn" class="ghost-btn">添加报告模板</button>
-            <button id="generateReportBtn" class="primary-btn">生成报告</button>
-          </div>
-        </div>
-
-        <div class="stack">
-          <div id="reportTemplatesList" class="card-list"></div>
-          
-          <div id="reportTemplateForm" class="mini-card" style="display: none;">
-            <h3>添加报告模板</h3>
-            <form id="newReportTemplateForm" class="stack">
-              <label class="field">
-                <span>名称</span>
-                <input id="rtName" type="text" required />
-              </label>
-              <label class="field">
-                <span>描述</span>
-                <textarea id="rtDescription" rows="3"></textarea>
-              </label>
-              <label class="field">
-                <span>格式</span>
-                <select id="rtFormat">
-                  <option value="html">HTML</option>
-                  <option value="markdown">Markdown</option>
-                </select>
-              </label>
-              <label class="field">
-                <span> sections（JSON格式）</span>
-                <textarea id="rtSections" rows="8">[{"id": "header", "title": "审计报告", "content": "{{company_name}} - {{audit_period}}"}, {"id": "introduction", "title": "一、审计概况", "content": "我们对{{company_name}}{{audit_period}}的财务报表进行了审计，审计工作按照中国注册会计师审计准则的规定执行。"}]</textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">保存</button>
-                <button type="button" id="cancelReportTemplateBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="reportForm" class="mini-card" style="display: none;">
-            <h3>生成审计报告</h3>
-            <form id="generateReportForm" class="stack">
-              <label class="field">
-                <span>选择模板</span>
-                <select id="reportTemplateSelect">
-                  <option value="">选择模板</option>
-                </select>
-              </label>
-              <div class="row">
-                <label class="field">
-                  <span>公司名称</span>
-                  <input id="reportCompanyName" type="text" required />
-                </label>
-                <label class="field">
-                  <span>审计期间</span>
-                  <input id="reportAuditPeriod" type="text" required />
-                </label>
-              </div>
-              <div class="row">
-                <label class="field">
-                  <span>审计日期</span>
-                  <input id="reportAuditDate" type="date" required />
-                </label>
-                <label class="field">
-                  <span>审计人员</span>
-                  <input id="reportAuditor" type="text" required />
-                </label>
-              </div>
-              <label class="field">
-                <span>审计发现（每行一个）</span>
-                <textarea id="reportFindings" rows="4"></textarea>
-              </label>
-              <label class="field">
-                <span>审计建议（每行一个）</span>
-                <textarea id="reportRecommendations" rows="4"></textarea>
-              </label>
-              <div class="editor-actions">
-                <button type="submit" class="primary-btn">生成报告</button>
-                <button type="button" id="cancelReportBtn" class="ghost-btn">取消</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="reportResult" class="response-board" style="display: none;">
-            <h3>报告生成结果</h3>
-            <div id="reportContent"></div>
-          </div>
-        </div>
-      </section>
+      <footer class="footer">
+        <p>会计审计智能知识作战台 © 2026</p>
+      </footer>
     </div>
 
     <script src="/app.js"></script>
