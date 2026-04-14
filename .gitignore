@@ -3,7 +3,13 @@ __pycache__/
 *.pyc
 
 # 数据文件
-data/
+data/generated/
+data/media/imports/archive/
+
+# 知识库和场景文件（可版本控制）
+!data/knowledge/
+!data/scenarios/
+!data/media/
 
 # 环境变量
 .env

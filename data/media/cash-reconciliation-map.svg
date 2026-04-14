@@ -1,0 +1,16 @@
+<svg width="900" height="340" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="340" rx="28" fill="#0F2D35"/>
+  <text x="450" y="54" text-anchor="middle" font-size="30" font-family="Microsoft YaHei" fill="#FFF7EC">银行对账证据链</text>
+  <rect x="70" y="112" width="146" height="92" rx="18" fill="#F6D9A2"/>
+  <rect x="256" y="112" width="146" height="92" rx="18" fill="#9FD3C7"/>
+  <rect x="442" y="112" width="146" height="92" rx="18" fill="#E88F4D"/>
+  <rect x="628" y="112" width="202" height="92" rx="18" fill="#B7C26D"/>
+  <path d="M216 158H256" stroke="#DDE9E6" stroke-width="8"/>
+  <path d="M402 158H442" stroke="#DDE9E6" stroke-width="8"/>
+  <path d="M588 158H628" stroke="#DDE9E6" stroke-width="8"/>
+  <text x="143" y="152" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#12343B">银行函证</text>
+  <text x="329" y="152" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#12343B">对账单</text>
+  <text x="515" y="152" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#12343B">网银流水</text>
+  <text x="729" y="146" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#12343B">受限资金协议</text>
+  <text x="729" y="176" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#12343B">审批 / 披露 / 期后结清</text>
+</svg>

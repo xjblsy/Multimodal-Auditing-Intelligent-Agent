@@ -1,0 +1,27 @@
+<svg width="900" height="420" viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="420" rx="28" fill="#F4E9D8"/>
+  <rect x="74" y="130" width="160" height="108" rx="18" fill="#0C3B44"/>
+  <rect x="286" y="82" width="160" height="108" rx="18" fill="#6B7A40"/>
+  <rect x="286" y="238" width="160" height="108" rx="18" fill="#D49A1F"/>
+  <rect x="502" y="82" width="160" height="108" rx="18" fill="#B65D3A"/>
+  <rect x="502" y="238" width="160" height="108" rx="18" fill="#2B6777"/>
+  <rect x="714" y="130" width="112" height="108" rx="18" fill="#12343B"/>
+  <path d="M234 184H286" stroke="#12343B" stroke-width="8"/>
+  <path d="M446 136H502" stroke="#12343B" stroke-width="8"/>
+  <path d="M446 292H502" stroke="#12343B" stroke-width="8"/>
+  <path d="M662 136H714" stroke="#12343B" stroke-width="8"/>
+  <path d="M662 292H714" stroke="#12343B" stroke-width="8"/>
+  <text x="450" y="54" text-anchor="middle" font-size="30" font-family="Microsoft YaHei" fill="#12343B">制造业存货风险地图</text>
+  <text x="154" y="176" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">原材料</text>
+  <text x="154" y="208" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#DDE9E6">收发存截止</text>
+  <text x="366" y="128" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">在产品</text>
+  <text x="366" y="160" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#EEF6D4">完工率与工单</text>
+  <text x="366" y="284" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">委外存货</text>
+  <text x="366" y="316" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#FFF4D9">函证与现场核对</text>
+  <text x="582" y="128" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">产成品</text>
+  <text x="582" y="160" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#FCE6DC">呆滞与跌价</text>
+  <text x="582" y="284" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">仓库现场</text>
+  <text x="582" y="316" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#DCEEF1">标签与盘点差异</text>
+  <text x="770" y="176" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">结论</text>
+  <text x="770" y="208" text-anchor="middle" font-size="18" font-family="Microsoft YaHei" fill="#DDE9E6">高估 / 跌价 / 跨期</text>
+</svg>

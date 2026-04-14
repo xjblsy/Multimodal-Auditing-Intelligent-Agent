@@ -1,0 +1,19 @@
+<svg width="900" height="360" viewBox="0 0 900 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="360" rx="28" fill="#FFF7EC"/>
+  <text x="450" y="58" text-anchor="middle" font-size="30" font-family="Microsoft YaHei" fill="#12343B">制造业成本循环</text>
+  <rect x="50" y="132" width="130" height="92" rx="18" fill="#0C3B44"/>
+  <rect x="214" y="132" width="130" height="92" rx="18" fill="#2B6777"/>
+  <rect x="378" y="132" width="130" height="92" rx="18" fill="#6B7A40"/>
+  <rect x="542" y="132" width="130" height="92" rx="18" fill="#D49A1F"/>
+  <rect x="706" y="132" width="130" height="92" rx="18" fill="#B65D3A"/>
+  <path d="M180 178H214" stroke="#12343B" stroke-width="8"/>
+  <path d="M344 178H378" stroke="#12343B" stroke-width="8"/>
+  <path d="M508 178H542" stroke="#12343B" stroke-width="8"/>
+  <path d="M672 178H706" stroke="#12343B" stroke-width="8"/>
+  <text x="115" y="172" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">采购入库</text>
+  <text x="279" y="172" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">领料归集</text>
+  <text x="443" y="172" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">生产工单</text>
+  <text x="607" y="172" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">完工入库</text>
+  <text x="771" y="172" text-anchor="middle" font-size="24" font-family="Microsoft YaHei" fill="#FFF7EC">销售结转</text>
+  <text x="450" y="300" text-anchor="middle" font-size="20" font-family="Microsoft YaHei" fill="#28525B">重点检查：单位成本波动、完工时点、制造费用分配、产销平衡。</text>
+</svg>

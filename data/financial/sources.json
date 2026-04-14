@@ -1,0 +1,10 @@
+{
+  "source_1": {
+    "id": "source_1",
+    "name": "IRIS 数据集",
+    "type": "csv",
+    "path": "C:\\Users\\shouy\\Desktop\\会计审计智能体\\data\\iris\\iris.csv",
+    "description": "经典的 IRIS 花卉分类数据集",
+    "last_updated": "2026-04-13T15:57:33.205926"
+  }
+}

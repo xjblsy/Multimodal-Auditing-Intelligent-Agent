@@ -1,0 +1,72 @@
+[
+  {
+    "id": "risk_1",
+    "name": "收入确认风险",
+    "description": "企业可能提前确认收入或虚构收入",
+    "severity": 5,
+    "likelihood": 4,
+    "category": "收入循环",
+    "industry": "通用",
+    "controls": [
+      "检查销售合同条款",
+      "验证发货记录",
+      "检查应收账款回款情况"
+    ]
+  },
+  {
+    "id": "risk_2",
+    "name": "存货估值风险",
+    "description": "企业可能高估存货价值或虚构存货",
+    "severity": 4,
+    "likelihood": 3,
+    "category": "存货循环",
+    "industry": "制造业",
+    "controls": [
+      "执行存货监盘",
+      "检查存货计价方法",
+      "分析存货周转率"
+    ]
+  },
+  {
+    "id": "risk_3",
+    "name": "费用资本化风险",
+    "description": "企业可能将应费用化的支出资本化",
+    "severity": 4,
+    "likelihood": 3,
+    "category": "费用循环",
+    "industry": "通用",
+    "controls": [
+      "检查资本化政策",
+      "验证资本化条件",
+      "分析资本化资产的摊销"
+    ]
+  },
+  {
+    "id": "risk_4",
+    "name": "关联交易风险",
+    "description": "企业可能通过关联交易操纵利润",
+    "severity": 5,
+    "likelihood": 3,
+    "category": "关联交易",
+    "industry": "通用",
+    "controls": [
+      "识别关联方",
+      "检查关联交易定价",
+      "验证关联交易的必要性"
+    ]
+  },
+  {
+    "id": "risk_5",
+    "name": "货币资金风险",
+    "description": "企业可能存在货币资金挪用或虚构",
+    "severity": 5,
+    "likelihood": 2,
+    "category": "货币资金",
+    "industry": "通用",
+    "controls": [
+      "执行银行函证",
+      "检查银行对账单",
+      "分析银行余额调节表"
+    ]
+  }
+]

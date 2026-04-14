@@ -1,0 +1,15 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="28" fill="#F4E9D8"/>
+  <circle cx="450" cy="260" r="138" fill="#FFF7EC" stroke="#0C3B44" stroke-width="10"/>
+  <circle cx="450" cy="260" r="78" fill="#D9EEE7"/>
+  <path d="M450 92C547.202 92 628 162.798 628 260" stroke="#0C3B44" stroke-width="16" stroke-linecap="round"/>
+  <path d="M628 260C628 357.202 547.202 438 450 438" stroke="#B65D3A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M450 438C352.798 438 272 357.202 272 260" stroke="#6B7A40" stroke-width="16" stroke-linecap="round"/>
+  <path d="M272 260C272 162.798 352.798 92 450 92" stroke="#D49A1F" stroke-width="16" stroke-linecap="round"/>
+  <text x="450" y="258" text-anchor="middle" font-size="34" font-family="Microsoft YaHei" fill="#0C3B44">审计学习闭环</text>
+  <text x="450" y="295" text-anchor="middle" font-size="20" font-family="Microsoft YaHei" fill="#28525B">风险 → 证据 → 结论 → 复盘</text>
+  <text x="450" y="62" text-anchor="middle" font-size="26" font-family="Microsoft YaHei" fill="#0C3B44">风险识别</text>
+  <text x="726" y="266" text-anchor="middle" font-size="26" font-family="Microsoft YaHei" fill="#B65D3A">证据获取</text>
+  <text x="450" y="486" text-anchor="middle" font-size="26" font-family="Microsoft YaHei" fill="#6B7A40">结论表达</text>
+  <text x="174" y="266" text-anchor="middle" font-size="26" font-family="Microsoft YaHei" fill="#D49A1F">项目复盘</text>
+</svg>

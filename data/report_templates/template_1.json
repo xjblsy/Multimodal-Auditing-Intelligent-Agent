@@ -1,0 +1,53 @@
+{
+  "id": "template_1",
+  "name": "标准审计报告模板",
+  "description": "符合审计准则要求的标准审计报告模板",
+  "sections": [
+    {
+      "id": "header",
+      "title": "审计报告",
+      "content": "{{company_name}} - {{audit_period}}"
+    },
+    {
+      "id": "introduction",
+      "title": "一、审计概况",
+      "content": "我们对{{company_name}}{{audit_period}}的财务报表进行了审计，审计工作按照中国注册会计师审计准则的规定执行。"
+    },
+    {
+      "id": "financial_data",
+      "title": "二、财务数据分析",
+      "content": "{{financial_data_summary}}"
+    },
+    {
+      "id": "risk_assessment",
+      "title": "三、风险评估",
+      "content": "{{risk_assessment_summary}}"
+    },
+    {
+      "id": "compliance_check",
+      "title": "四、合规性检查",
+      "content": "{{compliance_check_summary}}"
+    },
+    {
+      "id": "findings",
+      "title": "五、审计发现",
+      "content": "{{findings_summary}}"
+    },
+    {
+      "id": "recommendations",
+      "title": "六、审计建议",
+      "content": "{{recommendations_summary}}"
+    },
+    {
+      "id": "conclusion",
+      "title": "七、审计结论",
+      "content": "基于审计工作，我们认为{{company_name}}{{audit_period}}的财务报表在所有重大方面符合企业会计准则的规定，公允反映了其财务状况、经营成果和现金流量。"
+    },
+    {
+      "id": "signature",
+      "title": "审计人员签名",
+      "content": "审计人员: {{auditor}}\n日期: {{audit_date}}"
+    }
+  ],
+  "format": "html"
+}

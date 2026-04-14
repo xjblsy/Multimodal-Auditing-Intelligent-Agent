@@ -1,0 +1,16 @@
+<svg width="900" height="340" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="340" rx="28" fill="#0F2D35"/>
+  <path d="M90 180H810" stroke="#F6D9A2" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="160" cy="180" r="18" fill="#F6D9A2"/>
+  <circle cx="320" cy="180" r="18" fill="#E88F4D"/>
+  <circle cx="480" cy="180" r="18" fill="#F4E9D8"/>
+  <circle cx="640" cy="180" r="18" fill="#9FD3C7"/>
+  <circle cx="760" cy="180" r="18" fill="#B7C26D"/>
+  <text x="160" y="132" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#F6D9A2">合同签订</text>
+  <text x="320" y="122" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#E88F4D">系统开通</text>
+  <text x="480" y="132" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#F4E9D8">客户验收</text>
+  <text x="640" y="122" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#9FD3C7">开票入账</text>
+  <text x="760" y="132" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#B7C26D">回款/红冲</text>
+  <text x="450" y="66" text-anchor="middle" font-size="32" font-family="Microsoft YaHei" fill="#FFF7EC">收入截止测试时间线</text>
+  <text x="450" y="286" text-anchor="middle" font-size="20" font-family="Microsoft YaHei" fill="#DDE9E6">把履约时点和财务入账放到同一轴上，跨期问题就会显形。</text>
+</svg>

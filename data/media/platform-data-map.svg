@@ -1,0 +1,23 @@
+<svg width="900" height="380" viewBox="0 0 900 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="380" rx="28" fill="#F4E9D8"/>
+  <text x="450" y="50" text-anchor="middle" font-size="30" font-family="Microsoft YaHei" fill="#12343B">平台收入与数据控制图</text>
+  <circle cx="130" cy="190" r="64" fill="#0C3B44"/>
+  <circle cx="310" cy="190" r="64" fill="#2B6777"/>
+  <circle cx="490" cy="190" r="64" fill="#D49A1F"/>
+  <circle cx="670" cy="190" r="64" fill="#B65D3A"/>
+  <circle cx="810" cy="190" r="48" fill="#6B7A40"/>
+  <path d="M194 190H246" stroke="#12343B" stroke-width="8"/>
+  <path d="M374 190H426" stroke="#12343B" stroke-width="8"/>
+  <path d="M554 190H606" stroke="#12343B" stroke-width="8"/>
+  <path d="M734 190H762" stroke="#12343B" stroke-width="8"/>
+  <text x="130" y="184" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#FFF7EC">订单</text>
+  <text x="130" y="212" text-anchor="middle" font-size="16" font-family="Microsoft YaHei" fill="#DDE9E6">主责人判断</text>
+  <text x="310" y="184" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#FFF7EC">支付</text>
+  <text x="310" y="212" text-anchor="middle" font-size="16" font-family="Microsoft YaHei" fill="#DCEEF1">退款补贴</text>
+  <text x="490" y="184" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#FFF7EC">结算</text>
+  <text x="490" y="212" text-anchor="middle" font-size="16" font-family="Microsoft YaHei" fill="#FFF4D9">接口对账</text>
+  <text x="670" y="184" text-anchor="middle" font-size="22" font-family="Microsoft YaHei" fill="#FFF7EC">财务入账</text>
+  <text x="670" y="212" text-anchor="middle" font-size="16" font-family="Microsoft YaHei" fill="#FCE6DC">人工补录</text>
+  <text x="810" y="184" text-anchor="middle" font-size="20" font-family="Microsoft YaHei" fill="#FFF7EC">日志</text>
+  <text x="810" y="210" text-anchor="middle" font-size="15" font-family="Microsoft YaHei" fill="#EEF6D4">权限/留痕</text>
+</svg>
